@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TeLlevo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor= "let item of posts">
+      <ion-card class= "blanco">
+        <ion-card-header>
+          <ion-badge color="secondary">ID USER: {{item.userId}}</ion-badge>
+          <ion-card-subtitle class="negro">ID POST: {{item.id}}</ion-card-subtitle>
+          <ion-card-title class="negro">Title: {{item.title}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content class="negro">
+          {{item.body}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

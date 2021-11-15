@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recuperar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button color="light" [routerLink]="['/home']">
+      <ion-icon name="arrow-back-circle-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="rueda">
+    
+  </div>
+
+  <div class="margen">
+    <ion-button color="light" >
+    
+      <ion-label>Usuario: </ion-label>
+      
+        <ion-input placeholder="ej.ejemplo" #txtUsuario></ion-input>
+      
+    </ion-button>
+  </div>
+  
+  <div class="margen">
+    <ion-button color="light" >
+    
+      <ion-label>RUT: </ion-label>
+      
+        <ion-input  type="text" placeholder="11222333-4" #txtRut></ion-input>
+      
+    </ion-button>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="centrado">
+    <ion-button color="light" (click)="con(txtUsuario, txtRut)"> Recuperar</ion-button>
+  </div>
+  
+  </ion-content>
+  
