@@ -40,21 +40,11 @@ export class RecuperarPwPage implements OnInit {
     console.log(this.clave)
     console.log(this.rut)
 
-    if (this.usuario.trim().length != 0)
-    {
-      this.usuario = this.usuario;
-    }
   
     if (txtClave.value.trim().length != 0)
     {
       this.clave = txtClave.value;
-    }
-
-    if (this.rut.trim().length != 0)
-    {
-      this.rut = this.rut;
-    }
-    const datos = [{"usuario": this.usuario,
+      const datos = [{"usuario": this.usuario,
                     "clave": this.clave,
                     "rut": this.rut }];
     
@@ -68,6 +58,24 @@ export class RecuperarPwPage implements OnInit {
     toast.present();
     
     this.router.navigate(['/home']);
+    }
+    else
+    {
+      console.log("Ingrese nueva contraseña")
+      const toast = await this.toast.create({
+        message: 'Ingrese nueva contraseña',
+        duration: 2000,
+        color : "danger",
+        position: "bottom"
+      });
+      toast.present();
+    }
+
+
+
+
+
+    
     txtClave.value = "";
   }
   
