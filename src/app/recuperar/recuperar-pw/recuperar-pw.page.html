@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recuperar contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <h2 class="margen">Hola {{usuario}}, ingresa tu nueva contraseña:</h2>
+  <div class="margen">
+    <ion-button color="light" >
+    
+      <ion-label>Nueva contraseña: </ion-label>
+      
+        <ion-input class="rec" type="password" placeholder="****" #txtClave></ion-input>
+      
+    </ion-button>
+  </div>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="centrado">
+    <ion-button color="light" (click)="rescatar(txtClave)"> Cambiar</ion-button>
+  </div>
+</ion-content>

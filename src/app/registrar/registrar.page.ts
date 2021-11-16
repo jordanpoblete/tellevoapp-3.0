@@ -179,9 +179,9 @@ export class RegistrarPage implements OnInit {
     }
 
 
-    const datos = [{"usuario": txtUsuario.value,
-                    "clave": txtClave.value,
-                    "rut": txtRut.value }];
+    const datos = [{"usuario": this.usuario,
+                    "clave": this.clave,
+                    "rut": this.rut }];
     await this.crud.agregarConKey(txtUsuario.value,datos);
     txtUsuario.value = "";
     txtClave.value = "";

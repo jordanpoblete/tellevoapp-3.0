@@ -13,7 +13,15 @@ const routes: Routes = [
   },
   {
     path: 'recuperar',
-    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+    children: [{
+      path: "",
+      loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+    },
+    {
+      path: ":usuarioId",
+      loadChildren: () => import('./recuperar/recuperar-pw/recuperar-pw.module').then(m =>m.RecuperarPwPageModule)
+    }
+    ]
   },
   {
     path: 'ini-cond',
@@ -38,7 +46,8 @@ const routes: Routes = [
   {
     path: 'registrar',
     loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
-  },  {
+  },
+  {
     path: 'posts',
     loadChildren: () => import('./posts/posts/posts.module').then( m => m.PostsPageModule)
   },

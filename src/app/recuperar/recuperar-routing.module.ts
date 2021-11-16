@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: RecuperarPage
+  },  {
+    path: 'recuperar-pw',
+    loadChildren: () => import('./recuperar-pw/recuperar-pw.module').then( m => m.RecuperarPwPageModule)
   }
+
 ];
 
 @NgModule({

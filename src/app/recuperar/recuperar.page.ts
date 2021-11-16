@@ -12,6 +12,7 @@ import { CrudService } from '../crud.service';
 export class RecuperarPage implements OnInit {
   usuario = "";
   rut = "";
+  usuarioId = "";
   constructor(private login: CrudService,
     private toast: ToastController,
     private router: Router) { }
@@ -31,7 +32,8 @@ export class RecuperarPage implements OnInit {
           position: "bottom"
         });
         toast.present();
-        this.router.navigate(['/home']);
+        const usuarioId = txtUsuario.value;
+        this.router.navigate(['/recuperar', usuarioId]);
       }
       else
       {
