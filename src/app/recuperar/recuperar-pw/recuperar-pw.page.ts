@@ -29,7 +29,7 @@ export class RecuperarPwPage implements OnInit {
       return this.storage.get(this.usuario);     
     }  )
   }
-  async rescatar(txtClave)
+  async cambiar(txtClave:HTMLInputElement)
   { 
     
     const valor = await this.storage.get(this.usuario);
